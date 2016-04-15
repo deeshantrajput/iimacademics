@@ -1,7 +1,7 @@
 
-<div class="jumbotron text-center" style="background-image: url('<?= base_url(); ?>css/images/background.jpg');">
-    <h1>IIM Academics</h1> 
-    <p>Online Digital education for everyone</p> 
+<div class="jumbotron text-center" style="background-image: url('<?= base_url(); ?>css/images/tech.png');background-size:100%;background-color:white;background-repeat:no-repeat">
+    <h1 style="color:#D04949">IIM Academics</h1> 
+    <h3 style="color:#D04949"><strong>Online Digital education for everyone</strong></h3> 
 
     <form role="form" class="form-inline " method="post" action="<?= base_url(); ?>Pages/collegesearch">
         <div class="form-group">

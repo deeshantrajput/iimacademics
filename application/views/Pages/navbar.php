@@ -20,24 +20,24 @@
         <link rel="stylesheet" href="<?= base_url(); ?>css/footer.css">
         <style>
 
-.carousel-control.left,.carousel-control.right{
-  background-image:none;
-  margin-top:10%;
-  width:5%;
-}
-.shade img {
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    margin-bottom: 20px;
-}
-.shade img:hover {
-    filter: none; /* IE6-9 */
-    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
-}
-</style>
+            .carousel-control.left,.carousel-control.right{
+                background-image:none;
+                margin-top:10%;
+                width:5%;
+            }
+            .shade img {
+                filter: gray; /* IE6-9 */
+                -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+                -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+                box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+                margin-bottom: 20px;
+            }
+            .shade img:hover {
+                filter: none; /* IE6-9 */
+                -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+            }
+        </style>
         <script>
             $(document).ready(function() {
                 $("#name").autocomplete({
@@ -50,9 +50,11 @@
                     source: "<?php echo site_url('Pages/autosearchloc/?'); ?>"
                 });
             });
-         </script>
+           
+
+        </script>
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="margin-right: 0px">
 
         <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 30px">
             <div class="container">
@@ -74,7 +76,7 @@
                 </div>
             </div>
             <div id="search-bar">  
-                <form role="form" class="form-inline " method="post" action="<?= base_url(); ?>Pages/collegesearch">
+                <form role="form" class="form-inline " method="post" action="<?= base_url();?>Pages/collegesearch">
                     <div class="form-group">
                         <input type="text" id="location" autocomplete="off" name="location" class="form-control" size="30" placeholder="Enter location">
                     </div>

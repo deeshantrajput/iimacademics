@@ -2,54 +2,54 @@
 <div id="collegesearch" class="container-fluid" style="background-color: white">
     <div style="padding-top:100px">
         <div class="col-sm-2 well" style="background-color: white ;padding-top: 0px;box-shadow:2px">
-            <h3 style="color: #D04949;text-align: center">Filters</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Fees:
-                           <select  name="fees" class="form-control" onchange="">
-                            <option value="low">low to high</option> 
-                            <option value="high">high to low</option> 
-                           </select></th>
-                        </tr>
-                        <tr>
-                           <th>Rating:
-                           <select  name="rating" class="form-control">
-                            
-                            <option value="">low to high</option> 
-                            <option value="">high to low</option> 
-                           </select></th>
-                        </tr>
-                      <tr>
-                          <th>
-                              <button class=" btn btn-danger">Clear Filters</button></th>
-                     </tr>
-                    </thead>
-                </table>
-            </div>
+            <h4 class="container">Filters</h4>
+            <table class="table table-striped">
+                <tbody>
+                    <tr>Fees:</tr> 
+                    <tr>    
+                    <select name="" class="form-control" id="choose">
+                    <option>low to high</option>
+                    <option>high to low</option>
+                    </select> 
+                    </tr>
+                    <tr>Rating:</tr>
+                    <tr>   
+                    <select name="" class="form-control">
+                        <option>low to high</option>
+                        <option>high to low</option>
+                    </select>
+                      
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class=" btn btn-danger"><a href="<?=base_url();?>Pages/sortfees">Clear filters</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="col-sm-8">
+        <div id="thisdiv">
         <?php foreach ($records as $item): ?>
             <div class="jumbotron shadow well" style="padding: 10px; background-color: white">
                 <div>
                     <div class ="col-sm-4" style="padding:0px">
                         <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" width="90%" height="90%">'; ?>
                     </div>
-                    <h3 style="color:brown" class="col-sm-6"><?php echo $item['name']; ?></h3>
+                    <h3 style="color:brown" id="cname" class="col-sm-6"><?php echo $item['name']; ?></h3>
                     <h3 style="border-radius: 10px;behavior: url(PIE.htc);width: 90px;
                         height: 60px;padding: 10px;background:#D04949;text-align: center;font-size: 32px" class="col-sm-2"><?php echo $item['rating']; ?></h3>
                 </div> 
                 <h4 style="color: black"><?php echo $item['location']; ?></h4>
                 <h4  style="color: black">Course:<?php echo $item['course'] . "-" . $item['duration']; ?>&nbsp;&nbsp;&nbsp;&nbsp;Fees:<?php echo $item['fees']; ?></h4>
-                <button type="button" class="btn-danger" data-toggle="modal" data-target="#mModal">Write Review</button>
-                <button type="button" class="btn-danger" data-toggle="modal" data-target="#ratingModal">Give Rating</button>
-                <button class="btn-danger"><a href="<?php echo $item['url']; ?>" target="_blank" style="color:white">View Details</a></button>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mModal">Write Review</button>
+                <button type="button" class=" btn btn-danger" data-toggle="modal" data-target="#ratingModal">Give Rating</button>
+                <button class="btn btn-danger"><a href="<?php echo $item['url']; ?>" target="_blank" style="color:white">View Details</a></button>
             </div>
         <?php endforeach; ?>
-    
-        <div id="mModal" class="modal fade" role="dialog" style="padding-top: 100px">
+        </div>
+        <div id="mModal" class="modal modal-open modal-open-noscroll fade" role="dialog" style="padding-top: 100px">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <div id="ratingModal" class="modal" role="dialog" style="padding-top: 100px">
+        <div id="ratingModal" class="modal modal-open modal-open-noscroll fade" role="dialog" style="padding-top: 100px">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -120,7 +120,7 @@
                     </div> 
                     <h6 style="color: black"><strong><?php echo $f['location']; ?></strong></h6>
                     <h6  style="color: black"><strong>Course:<?php echo $f['course'] . "-" . $f['duration']; ?><br><?php echo $f['fees']; ?></strong></h6>
-                    <button class="btn-danger"><a href="<?php echo $f['url']; ?>" target="_blank" style="color:white">View Details</a></button>
+                    <button class=" btn btn-danger"><a href="<?php echo $f['url']; ?>" target="_blank" style="color:white">View Details</a></button>
                 </div>
             <?php endforeach; ?>
         </div>

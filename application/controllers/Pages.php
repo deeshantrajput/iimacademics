@@ -1,7 +1,8 @@
 <?php
 
 class Pages extends CI_Controller {
-
+    
+    
     public function view($page = 'home') {
         if (!file_exists(APPPATH . 'views/pages/' . $page . '.php')) {
             // Whoops, we don't have a page for that!
@@ -122,13 +123,20 @@ class Pages extends CI_Controller {
         $this->load->view('pages/thankreview');
         $this->load->view('templates/footer');
     }
-
+    
+    public function sortfees() {
+        $this->load->model('home_model');
+        $data['feature'] = $this->home_model->featured();
+            $this->load->view('pages/navbar');
+            $this->load->view('pages/collegesearch', $data);
+            $this->load->view('templates/footer');
+    }
     public function collegesearch() {
 
         $location = $this->input->post('location');
         $name = $this->input->post('name');
         $course = $this->input->post('course');
-
+        
         if ((!empty($location)) && (!empty($name)) && (!empty($course))) {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search1($location, $name, $course);

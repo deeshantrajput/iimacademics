@@ -1,65 +1,41 @@
 
-<div class="container-fluid" style="background-color: white;padding-top: 130px ">
-    <div class="container-fluid col-12 col-md-4 col-sm-4" style="background-color: white">
-        <iframe height="250px"src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="container-fluid col-12 col-md-4 col-sm-4" style="background-color: white">
-        <iframe height="250px"src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="container-fluid col-12 col-md-4 col-sm-4" style="background-color: white">
-        <iframe height="250px"src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
-    </div>
+<div class="container-fluid" style="background-color: white;padding-top: 100px ">
+    
     <div  class="container-fluid" style="background-color: white">
-        <div class="shade" style="padding:0">
 
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid;border-color: #fff;border-width: 1px 1px 0 0">
+        <div class="row shade" style="padding:0">
+            <div class="col-12 col-md-8 col-sm-8" style="">
+
                 <a title="Image 1" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-1" src="<?= base_url(); ?>css/images/background.jpg">
+                    <img class="thumbnai img-responsive" id="image-1" src="<?= base_url(); ?>css/images/1.jpg">
                 </a>
             </div>
 
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid; border-color: #fff;border-width: 1px 1px 0 0">
+            <div class="col-12 col-md-4 col-sm-4" style="">
                 <a title="Image 2" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-2" src="<?= base_url(); ?>css/images/background.jpg">
+                    <img class="thumbnai img-responsive" id="image-2" src="<?= base_url(); ?>css/images/2.jpg">
                 </a>
 
             </div>
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid;border-color: #fff;border-width: 1px 1px 0 0">
+            <div class="col-12 col-md-4 col-sm-6" style="">
                 <a title="Image 3" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg" >
+                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg">
                 </a>
             </div>
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid ;border-color: #fff;border-width: 1px 1px 0 0">
-                <a title="Image 3" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg" >
-                </a>
-            </div>
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid;border-color: white;bordborder-width: 1px 1px 0 0">
-                <a title="Image 1" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-1" src="<?= base_url(); ?>css/images/background.jpg">
-                </a>
-            </div>
-
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid ;border-color: #fff;border-width: 1px 1px 0 0">
-                <a title="Image 2" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-2" src="<?= base_url(); ?>css/images/background.jpg">
-                </a>
-
-            </div>
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid ;border-color: #fff;border-width: 1px 1px 0 0">
-                <a title="Image 3" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg" >
-                </a>
-            </div>
-            <div class="col-12 col-md-3 col-sm-6" style="padding-left: 0px;padding-right: 0px;padding-bottom: 0px;border:1px solid; border-color: #fff;border-width: 1px 1px 0 0">
-                <a title="Image 3" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg" >
-                </a>
-            </div>
-            
+        </div>
+    </div>
+     
+    <div  class="container-fluid" style="background-color: white">
+        <div class="col-12 col-md-8 col-sm-8" style="">
+        <iframe src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-12 col-md-4 col-sm-4" style="">
+        <iframe src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
+        </div>
         </div>
 
-    </div>
+
+
 </div>
 
 <div class="hidden" id="img-repo">
@@ -76,7 +52,7 @@
     </div>
 
     <!-- #image-2 -->
-   <div class="item" id="image-2">
+    <div class="item" id="image-2">
         <img class="thumbnail img-responsive" title="Image 11" src="<?= base_url(); ?>css/images/1.jpg">
     </div>
     <div class="item" id="image-2">
