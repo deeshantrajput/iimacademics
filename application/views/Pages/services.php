@@ -1,6 +1,6 @@
 <!-- Container (Services Section) -->
 <div id="services" class=" container-fluid text-center" style="background-color: white">
-    <h2 style="padding-top: 80px">SERVICES</h2>
+    <h2>SERVICES</h2>
     <h4>What we offer</h4>
     <br>
     <div class="row">

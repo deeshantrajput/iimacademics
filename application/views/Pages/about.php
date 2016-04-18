@@ -1,5 +1,5 @@
 <!-- Container (About Section) -->
-<div class="container-fluid" style="padding-top:110px;background-color: white">
+<div class="container-fluid" style="background-color: white">
     <div class="col-sm-4">
         <img src="<?= base_url(); ?>css/images/brain.jpg" width="110%">
     </div>
@@ -22,10 +22,10 @@
 <div class="container-fluid bg-grey" style="padding-top:150px;padding-bottom:100px;background:linear-gradient(
       rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.2)
-    ),url('<?= base_url(); ?>css/images/sachin.jpg')">
+    ),url('<?= base_url(); ?>css/images/sachin.jpg');background-size:100% 100%">
     <div class="col-sm-5" style="padding-top:0">
         <h2 style="color:white"><strong>VISION:</strong></h2>
-        <h4 style="color:white"><strong> IIM academics is co-founded and  lead by alumnus of IIM Calcutta, primarily to provide best in class education opportunity at Rural India,  support mission of 'Pradhan MantriKaushal Vikas Yojana' to create skilled manpower at grass-root level by providing them vocational, technical and skill development education.</strong></h4>
+        <h4 style="color:white"><strong> IIM academics is co-founded and  lead by alumnus of IIM Calcutta, primarily to provide best in class education opportunity at Rural India,  support mission of 'Pradhan Mantri Kaushal Vikas Yojana' to create skilled manpower at grass-root level by providing them vocational, technical and skill development education.</strong></h4>
         </div>
     
 </div>

@@ -131,65 +131,72 @@ class Pages extends CI_Controller {
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
     }
-    public function collegesearch() {
-
+    public function collegesearch($sort_by='fees',$sort_order='asc') {
         $location = $this->input->post('location');
         $name = $this->input->post('name');
         $course = $this->input->post('course');
         
         if ((!empty($location)) && (!empty($name)) && (!empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search1($location, $name, $course);
+            $data['records'] = $this->home_model->Search1($location, $name, $course,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((!empty($location)) && (!empty($name)) && (empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search2($location, $name);
+            $data['records'] = $this->home_model->Search2($location, $name,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((!empty($location)) && (empty($name)) && (!empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search3($location, $course);
+            $data['records'] = $this->home_model->Search3($location, $course,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((empty($location)) && (!empty($name)) && (!empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search4($name, $course);
+            $data['records'] = $this->home_model->Search4($name, $course,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((!empty($location)) && (empty($name)) && (empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search5($location);
+            $data['records'] = $this->home_model->Search5($location,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((empty($location)) && (!empty($name)) && (empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search6($name);
+            $data['records'] = $this->home_model->Search6($name,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } elseif ((empty($location)) && (empty($name)) && (!empty($course))) {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->Search7($course);
+            $data['records'] = $this->home_model->Search7($course,$sort_by,$sort_order);
+            $data['sort_order'] = $sort_order;
             $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } else {
             $this->load->model('home_model');
-            $data['records'] = $this->home_model->getSearch();
+            $data['records'] = $this->home_model->getSearch($sort_by,$sort_order);
             $data['feature'] = $this->home_model->featured();
+            $data['sort_order'] = $sort_order;
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch',$data);
             $this->load->view('templates/footer');
@@ -212,6 +219,31 @@ class Pages extends CI_Controller {
         );
         $this->home_model->form_insert_rating($data);
         redirect(base_url() . 'Pages/thankreview');
+    }
+    
+    public function topeng() {
+        $this->load->model('home_model');
+            $data['records'] = $this->home_model->getEng();
+            $data['feature'] = $this->home_model->featured();
+            $this->load->view('pages/navbar');
+            $this->load->view('pages/top',$data);
+            $this->load->view('templates/footer');
+    }
+    public function topmba() {
+        $this->load->model('home_model');
+            $data['records'] = $this->home_model->getMba();
+            $data['feature'] = $this->home_model->featured();
+            $this->load->view('pages/navbar');
+            $this->load->view('pages/top',$data);
+            $this->load->view('templates/footer');
+    }
+    public function topuniv() {
+        $this->load->model('home_model');
+            $data['records'] = $this->home_model->getUniv();
+            $data['feature'] = $this->home_model->featured();
+            $this->load->view('pages/navbar');
+            $this->load->view('pages/top',$data);
+            $this->load->view('templates/footer');
     }
 
     public function autosearch() {

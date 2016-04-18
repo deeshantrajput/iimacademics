@@ -1,6 +1,6 @@
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid" style="background-color: white">
-    <h2 class="text-center" style="padding-top: 80px">CONTACT</h2>
+    <h2 class="text-center">CONTACT</h2>
     <div class="row">
         <div class="col-sm-5">
             <p><strong>Contact us and we'll get back to you within 24 hours.</strong></p>

@@ -1,20 +1,20 @@
 <footer class="footer-distributed">
-    <div style="padding-top: 0px;width:100%">
-    <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded slideanim" style="margin-right: 70px;margin-left: 50px">
+    <div style="padding-top: 0px;width:100%;">
+    <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
     <li>
        <h2 class="zero">&nbsp;&nbsp;&nbsp;Computer Literacy..</h2>
        <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More</p>
     </li>
     <li><a href="http://bracsm.org/" target="_blank"><img src="<?= base_url(); ?>css/images/bras.jpg" class="top" alt=""></a></li>
      </ul>
-     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded slideanim" style="margin-left: 50px;margin-right: 70px">
+     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
     <li>
        <h2 class="zero">&nbsp;&nbsp;&nbsp;Skill Development..</h2>
        <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
     </li>
     <li><a href="http://amassskillventures.in" target="_blank"><img src="<?= base_url(); ?>css/images/nsd.jpg" class="top" alt=""></a></li>
      </ul>
-     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded slideanim" style="margin-left: 50px;margin-right:20px ">
+     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
     <li>
        <h2 class="zero">&nbsp;&nbsp;&nbsp;Smart textbooks..</h2>
        <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
@@ -53,7 +53,7 @@
 
         <div>
             <i class="fa fa-envelope"></i>
-            <p><a href="mailto:admissionsupport@iimacademics.com">admissionsupport@iimacademics.com</a></p>
+            <p><a href="mailto:admissionsupport@iimacademics.com">admissionsupport @iimacademics.com</a></p>
         </div>
 
     </div>

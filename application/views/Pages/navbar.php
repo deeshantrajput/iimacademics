@@ -50,8 +50,10 @@
                     source: "<?php echo site_url('Pages/autosearchloc/?'); ?>"
                 });
             });
+             $(document).ready(function loaddoc() {
+                console.log('PHP: ".implode(',', $records)."');
+               });
            
-
         </script>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="margin-right: 0px">
@@ -76,7 +78,7 @@
                 </div>
             </div>
             <div id="search-bar">  
-                <form role="form" class="form-inline " method="post" action="<?= base_url();?>Pages/collegesearch">
+                <form role="form" class="form-inline " method="post" action="<?= base_url();?>Pages/collegesearch/fees/asc">
                     <div class="form-group">
                         <input type="text" id="location" autocomplete="off" name="location" class="form-control" size="30" placeholder="Enter location">
                     </div>

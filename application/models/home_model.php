@@ -18,43 +18,63 @@ class home_model extends CI_Model {
         $this->db->insert('ratings', $data);
     }
 
-    public function Search1($location, $college, $course) {
+    public function Search1($location, $college, $course,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('location' => $location, 'name' => $college, 'course' => $course));
         return $query->result_array();
     }
 
-    public function Search2($location, $college) {
+    public function Search2($location, $college,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('location' => $location, 'name' => $college));
         return $query->result_array();
     }
 
-    public function Search3($location, $course) {
+    public function Search3($location, $course,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('location' => $location, 'course' => $course));
         return $query->result_array();
     }
 
-    public function Search4($college, $course) {
+    public function Search4($college, $course,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('name' => $college, 'course' => $course));
         return $query->result_array();
     }
 
-    public function Search5($location) {
+    public function Search5($location,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('location' => $location));
         return $query->result_array();
     }
 
-    public function Search6($college) {
+    public function Search6($college,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('name' => $college));
         return $query->result_array();
     }
 
-    public function Search7($course) {
+    public function Search7($course,$sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
         $query = $this->db->get_where('colleges', array('course' => $course));
         return $query->result_array();
     }
 
-    public function getSearch() {
+    public function getSearch($sort_by,$sort_order) {
+        $this->db->order_by($sort_by,$sort_order);
          $query = $this->db->get('colleges');
+        return $query->result_array();  
+    }
+    public function getEng() {
+         $query = $this->db->get('engineering');
+        return $query->result_array();  
+    }
+    public function getMba() {
+         $query = $this->db->get('management');
+        return $query->result_array();  
+    }
+    public function getUniv() {
+         $query = $this->db->get('universities');
         return $query->result_array();  
     }
     

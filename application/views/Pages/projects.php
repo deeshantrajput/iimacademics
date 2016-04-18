@@ -1,5 +1,5 @@
 
-<div class="container-fluid" style="background-color: white;padding-top: 100px ">
+<div class="container-fluid" style="background-color: white">
     
     <div  class="container-fluid" style="background-color: white">
 
@@ -27,12 +27,19 @@
      
     <div  class="container-fluid" style="background-color: white">
         <div class="col-12 col-md-8 col-sm-8" style="">
-        <iframe src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/rAoZ6QksXnY" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="col-12 col-md-4 col-sm-4" style="">
-        <iframe src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
+            <iframe  width="100%" height="190px" src="https://www.youtube.com/embed/Z2MfPShEyBo" frameborder="0" allowfullscreen></iframe>
         </div>
-        </div>
+         <div class="col-12 col-md-4 col-sm-4" style="padding-top: 10px">
+       <iframe width="100%" height="190px" src="https://www.youtube.com/embed/JAwYeipbfHE" frameborder="0" allowfullscreen></iframe>
+         </div>
+        
+        
+        
+        
+   </div>
 
 
 
