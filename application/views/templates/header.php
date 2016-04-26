@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="IIM-academics">
+<html lang="en">
     <head>
         <title>IIM Academics</title>
         <link rel="shortcut icon" href="<?= base_url(); ?>css/images/logo.ico">
@@ -23,10 +23,16 @@
         <script>
             $(document).ready(function() {
                 $("#name").autocomplete({
+                    maxItems: 10,
+                    minLength:3,
                     source: "<?php echo site_url('Pages/autosearch/?');?>"
+                    
                 });
                 $("#location").autocomplete({
+                    minLength:3,
+                    maxItems: 10,
                     source: "<?php echo site_url('Pages/autosearchloc/?');?>"
+                    
                 });
          });
         </script>
@@ -41,15 +47,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
+                    
                     <a class="navbar-brand" href="<?php echo base_url(); ?>pages/view">IIM Academics</a>
+                    
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="<?php echo base_url(); ?>pages/aboutus">ABOUT</a></li>
                         <li><a href="<?php echo base_url(); ?>pages/services">SERVICES</a></li>
-                        <li><a href="<?php echo base_url(); ?>pages/projects">PROJECTS</a></li>
+                        <li><a href="<?php echo base_url(); ?>pages/projects">GALLERY</a></li>
                         <li><a href="<?php echo base_url(); ?>pages/contacts">CONTACT</a></li>
+                        <li><a>Dial :1800-11-3340</a></li>
                     </ul>
+                   
                 </div>
             </div>
         </nav>

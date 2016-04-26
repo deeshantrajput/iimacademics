@@ -50,6 +50,7 @@ class Pages extends CI_Controller {
         $data = array(
             'name' => $this->input->post('name'),
             'email' => $this->input->post('email'),
+            'purpose' => $this->input->post('purpose'),
             'message' => $this->input->post('comments')
         );
         $this->home_model->form_insert($data);
@@ -60,6 +61,7 @@ class Pages extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('purpose', 'Purpose', 'required');
         $this->form_validation->set_rules('message', 'Message', 'required');
 
         if ($this->form_validation->run() == FALSE) {
@@ -69,11 +71,13 @@ class Pages extends CI_Controller {
         } else {
             $name = $this->input->post('name');
             $email = $this->input->post('email');
+            $purpose = $this->input->post('purpose');
             $message = $this->input->post('message');
             $data = array(
                 'name' => $this->input->post('name'),
                 'email' => $this->input->post('email'),
-                'message' => $this->input->post('message')
+                'purpose' => $this->input->post('purpose'),
+                'message' => $this->input->post('message')    
             );
             $this->home_model->form_insert($data);
             $config['mailtype'] = 'html';
@@ -96,6 +100,12 @@ class Pages extends CI_Controller {
             $msg.= "<td height='25' bgcolor='#F5F5F5'>Email Id </td>";
             $msg.= "<td height='25' bgcolor='#F5F5F5'><strong>:</strong></td>";
             $msg.= "<td height='25' bgcolor='#F5F5F5'>$email</td>";
+            $msg.= "</tr>";
+            $msg.= "<tr>";
+            $msg.= "<td height='25' bgcolor='#F5F5F5'>&nbsp;</td>";
+            $msg.= "<td height='25' bgcolor='#F5F5F5'>Purpose </td>";
+            $msg.= "<td height='25' bgcolor='#F5F5F5'><strong>:</strong></td>";
+            $msg.= "<td height='25' bgcolor='#F5F5F5'>$purpose</td>";
             $msg.= "</tr>";
             $msg.= "<tr>";
             $msg.= "<td height='95'>&nbsp;</td>";
@@ -123,15 +133,16 @@ class Pages extends CI_Controller {
         $this->load->view('pages/thankreview');
         $this->load->view('templates/footer');
     }
-    
-    public function sortfees() {
+    public function getreviews($name) {
         $this->load->model('home_model');
-        $data['feature'] = $this->home_model->featured();
+        $name=str_replace("%20"," ",$name);
+        $data['records'] = $this->home_model->getreviews($name);
             $this->load->view('pages/navbar');
-            $this->load->view('pages/collegesearch', $data);
+            $this->load->view('pages/reviews', $data);
             $this->load->view('templates/footer');
     }
-    public function collegesearch($sort_by='fees',$sort_order='asc') {
+    
+    public function collegesearch($sort_by='rating',$sort_order='desc') {
         $location = $this->input->post('location');
         $name = $this->input->post('name');
         $course = $this->input->post('course');
@@ -203,10 +214,11 @@ class Pages extends CI_Controller {
         }
     }
 
-    public function review() {
+    public function review($name) {
         $data = array(
-            'name' => $this->input->post('name'),
-            'review' => $this->input->post('review')
+            'name' => urldecode($name),
+            'review' => $this->input->post('review'),
+            'rating' => $this->input->post('rating')
         );
         $this->home_model->form_insert_review($data);
         redirect(base_url() . 'Pages/thankreview');

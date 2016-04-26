@@ -7,19 +7,19 @@
             <div class="col-12 col-md-8 col-sm-8" style="">
 
                 <a title="Image 1" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-1" src="<?= base_url(); ?>css/images/1.jpg">
+                    <img width="100%" class="thumbnai img-responsive" id="image-1" src="<?= base_url(); ?>css/images/4.jpg">
                 </a>
             </div>
 
             <div class="col-12 col-md-4 col-sm-4" style="">
                 <a title="Image 2" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-2" src="<?= base_url(); ?>css/images/2.jpg">
+                    <img class="thumbnai img-responsive" id="image-2" src="<?= base_url(); ?>css/images/6.jpg">
                 </a>
 
             </div>
-            <div class="col-12 col-md-4 col-sm-6" style="">
+            <div class="col-12 col-md-4 col-sm-4" style="">
                 <a title="Image 3" href="#"> 
-                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/background.jpg">
+                    <img class="thumbnai img-responsive" id="image-3" src="<?= base_url(); ?>css/images/10.jpg">
                 </a>
             </div>
         </div>
@@ -49,7 +49,7 @@
 
     <!-- #image-1 -->
     <div class="item" id="image-1">
-        <img class="thumbnail img-responsive" title="Skill Vehicle" src="<?= base_url(); ?>css/images/1.jpg">
+        <img class="thumbnail img-responsive" title="Skill Vehicle" src="<?= base_url(); ?>css/images/4.jpg">
     </div>
     <div class="item" id="image-1">
         <img class="thumbnail img-responsive" title="Skill Vehicle" src="<?= base_url(); ?>css/images/2.jpg">
@@ -57,27 +57,28 @@
     <div class="item" id="image-1">
         <img class="thumbnail img-responsive" title="Skill Vehicle" src="<?= base_url(); ?>css/images/3.jpg">
     </div>
+    
 
     <!-- #image-2 -->
     <div class="item" id="image-2">
-        <img class="thumbnail img-responsive" title="Image 11" src="<?= base_url(); ?>css/images/1.jpg">
+        <img class="thumbnail img-responsive" title="Our Skill Vehicle Team" src="<?= base_url(); ?>css/images/6.jpg">
     </div>
     <div class="item" id="image-2">
-        <img class="thumbnail img-responsive" title="Image 12" src="<?= base_url(); ?>css/images/2.jpg">
+        <img class="thumbnail img-responsive" title="Our Skill Vehicle Team" src="<?= base_url(); ?>css/images/7.jpg">
     </div>
     <div class="item" id="image-2">
-        <img class="thumbnail img-responsive" title="Image 13" src="<?= base_url(); ?>css/images/3.jpg">
+        <img class="thumbnail img-responsive" title="Our Skill Vehicle Team" src="<?= base_url(); ?>css/images/8.jpg">
     </div>
 
     <!-- #image-3-->
     <div class="item" id="image-3">
-        <img class="thumbnail img-responsive" title="Image 11" src="<?= base_url(); ?>css/images/1.jpg">
+        <img class="thumbnail img-responsive" title="Inner Glimpse.." src="<?= base_url(); ?>css/images/10.jpg">
     </div>
     <div class="item" id="image-3">
-        <img class="thumbnail img-responsive" title="Image 12" src="<?= base_url(); ?>css/images/2.jpg">
+        <img class="thumbnail img-responsive" title="Inner Glimpse.." src="<?= base_url(); ?>css/images/9.jpg">
     </div>
     <div class="item" id="image-3">
-        <img class="thumbnail img-responsive" title="Image 13" src="<?= base_url(); ?>css/images/3.jpg">
+        <img class="thumbnail img-responsive" title="Inner Glimpse.." src="<?= base_url(); ?>css/images/11.jpg">
     </div>       
 
 </div>

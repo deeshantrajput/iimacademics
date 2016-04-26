@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="IIM-academics">
+<html lang="en">
     <head>
         <title>IIM Academics</title>
         <link rel="shortcut icon" href="<?= base_url(); ?>css/images/logo.ico">
@@ -41,19 +41,25 @@
         <script>
             $(document).ready(function() {
                 $("#name").autocomplete({
+                    minLength: 3,
+                    maxItems: 10,
                     source: "<?php echo site_url('Pages/autosearch/?'); ?>"
+
                 });
             });
 
             $(document).ready(function() {
                 $('#location').autocomplete({
+                    minLength: 4,
+                    maxItems: 10,
                     source: "<?php echo site_url('Pages/autosearchloc/?'); ?>"
+
                 });
             });
-             $(document).ready(function loaddoc() {
-                console.log('PHP: ".implode(',', $records)."');
-               });
-           
+            $(document).ready(function loaddoc() {
+                console.log('PHP: ".implode(', ', $records)."');
+            });
+
         </script>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="margin-right: 0px">
@@ -72,13 +78,14 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="<?php echo base_url(); ?>pages/aboutus">ABOUT</a></li>
                         <li><a href="<?php echo base_url(); ?>pages/services">SERVICES</a></li>
-                        <li><a href="<?php echo base_url(); ?>pages/projects">PROJECTS</a></li>
+                        <li><a href="<?php echo base_url(); ?>pages/projects">GALLERY</a></li>
                         <li><a href="<?php echo base_url(); ?>pages/contacts">CONTACT</a></li>
+                        <li><a>Dial :1800-11-3340</a></li>
                     </ul>
                 </div>
             </div>
             <div id="search-bar">  
-                <form role="form" class="form-inline " method="post" action="<?= base_url();?>Pages/collegesearch/fees/asc">
+                <form role="form" class="form-inline " method="post" action="<?= base_url(); ?>Pages/collegesearch/rating/desc">
                     <div class="form-group">
                         <input type="text" id="location" autocomplete="off" name="location" class="form-control" size="30" placeholder="Enter location">
                     </div>
@@ -92,7 +99,6 @@
                             <option value="M.TECH">M.TECH</option> 
                             <option value="MBA">MBA</option> 
                             <option value="PHD">PHD</option>
-                            <option value="Diploma">Diploma</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-danger">Search</button>

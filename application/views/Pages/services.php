@@ -4,38 +4,65 @@
     <h4>What we offer</h4>
     <br>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <span class="glyphicon glyphicon-pencil logo-small"></span>
-            <h4>Digital Education</h4>
-            <p>Online content and classes..</p>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4>Digital Education <br>Online content and classes..</h4></a>
+                
         </div>
-        <div class="col-sm-4" id="prlx_lyr">
-            <span class="glyphicon glyphicon-education logo-small"></span>
-            <h4>Indian Universities Admission</h4>
-            <p>We are offering Distance and Regular Courses..</p>
-        </div>
-        <div class="col-sm-4" id="prlx_lyr">
-            <span class="glyphicon glyphicon-globe logo-small"></span>
-            <h4>International Universities Admission</h4>
-            <p>Admission in to 4600 Universities across Globe..</p>
+        <div class="col-sm-6">    
         </div>
     </div>
-    <br><br>
     <div class="row">
-        <div class="col-sm-4" id="prlx_lyr">
+
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6" id="prlx_lyr">
+            <span class="glyphicon glyphicon-education logo-small"></span>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4>Indian Universities Admission<br>
+                We are offering Distance and Regular Courses..</h4</a>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-sm-6" id="prlx_lyr">
+            <span class="glyphicon glyphicon-globe logo-small"></span>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4>International Universities Admission<br>
+                Admission in to 4600 Universities across Globe..</h4></a>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-6" id="prlx_lyr">
             <span class="glyphicon glyphicon-wrench logo-small"></span>
-            <h4>National Skill Development</h4>
-            <p>Platform which develop skill <br> for their growth and well being..</p>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4>National Skill Development
+                <br>Platform which develop skill <br> for their growth and well being..</h4></a>
         </div>
-        <div class="col-sm-4" id="prlx_lyr">
+    </div>
+    <div class="row">
+
+        <div class="col-sm-6" id="prlx_lyr">
             <span class="glyphicon glyphicon-phone logo-small"></span>
-            <h4>National Digital Literacy Programme</h4>
-            <p>Higher technical education for<br> urban as well as rural areas..</p>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4>National Digital Literacy Programme
+                <br>Higher technical education for<br> urban as well as rural areas..</h4></a>
         </div>
-        <div class="col-sm-4" id="prlx_lyr">
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+
+        </div>
+        <div class="col-sm-6" id="prlx_lyr">
             <span class="glyphicon glyphicon-grain logo-small"></span>
-            <h4 style="color:#303030;">NGO Projects</h4>
-            <p>Academics, Women Safety, <br> Sex Education Teachers Training..</p>
+            <a style="text-decoration:none" href="<?php echo base_url(); ?>pages/contacts"><h4 style="color:#303030;">NGO Projects<br>
+                Academics, Women Safety, <br>Sex Education Teachers Training..</h4></a>
         </div>
+
     </div>
 </div>

@@ -17,6 +17,18 @@
                     <div class="col-sm-6 form-group">
                         <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                     </div>
+                    <div class=" col-sm-12 form-group">
+                        <select  name="purpose" class="form-control">
+                            <option value="">Select Purpose</option> 
+                            <option value="Indian University Admission">Indian University Admission</option> 
+                            <option value="International University Admission">International University Admission</option> 
+                            <option value="Dr. BR Ambedkar Computer Literacy Program">Dr. BR Ambedkar Computer Literacy Program</option> 
+                            <option value="National Skill development Corporation">National Skill development Corporation</option>
+                            <option value="Kopy Kitab">Kopy Kitab</option> 
+                            <option value="NGO">NGO</option>
+                            <option value="others">others</option>
+                        </select>
+                    </div>
                 </div>
                 <textarea class="form-control" id="comments" name="message" placeholder="Message or query" rows="5" required></textarea><br>
                 <div class="row">
@@ -35,7 +47,7 @@
 <!-- Add Google Maps -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
-    var myCenter = new google.maps.LatLng(28.409152, 77.042778);
+    var myCenter = new google.maps.LatLng(28.459497, 77.026638);
 
     function initialize() {
         var mapProp = {

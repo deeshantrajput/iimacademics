@@ -3,7 +3,7 @@
     <h1 style="color:#D04949">IIM Academics</h1> 
     <h3 style="color:#D04949"><strong>Online Digital education for everyone</strong></h3> 
 
-    <form role="form" class="form-inline " method="post" action="<?= base_url(); ?>Pages/collegesearch/fees/asc">
+    <form role="form" class="form-inline " method="post" action="<?= base_url(); ?>Pages/collegesearch/rating/desc">
         <div class="form-group">
             <input type="text" id="location" autocomplete="off" name="location" class="form-control" size="30" placeholder="Enter location">
         </div>
@@ -17,7 +17,6 @@
                 <option value="M.TECH">M.TECH</option> 
                 <option value="MBA">MBA</option> 
                 <option value="PHD">PHD</option>
-                <option value="Diploma">Diploma</option>
             </select>
         </div>
         <button type="submit" class="btn btn-danger">Search</button>

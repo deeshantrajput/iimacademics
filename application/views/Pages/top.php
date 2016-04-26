@@ -19,10 +19,8 @@
                 </div> 
                 <h4 style="color: black"><?php echo $item['location']; ?></h4>
                 <h4  style="color: black">Score:<?php echo $item['weighted_score']; ?></h4>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#mModal">Write Review</button>
-                <button type="button" class=" btn btn-danger" data-toggle="modal" data-target="#ratingModal">Give Rating</button>
-                <button class="btn btn-danger"><a href="<?php echo $item['url']; ?>" target="_blank" style="color:white">View Details</a></button>
-            </div>
+                 <button class=" btn btn-danger"><a href="http://<?php echo $item['url']; ?>" target="_blank" style="color:white">View Details</a></button>
+                </div>
         <?php endforeach; ?>
         </div>
         <div id="mModal" class="modal modal-open modal-open-noscroll fade" role="dialog" style="padding-top: 100px">
@@ -84,21 +82,8 @@
         </div>
     </div>
     <div>
-        <div class="col-sm-2" style="background-color: white;padding-top: 0px;box-shadow: 0 0 2px rgba(0,0,0,0.5)">
-            <h6 style="text-align:right"><strong>Featured</strong></h6>
-            <?php foreach ($feature as $f): ?>
-                <div class="shadow well" style="padding: 10px; background-color: white;box: 0 0 2px rgba(0,0,0,0.5)">
-                    <div>
-                        <div class ="col-sm-12" style="padding:0px">
-                            <?php echo '<img src="data:image/jpeg;base64,' . base64_encode($f['image']) . '" width="90%" height="90%">'; ?>
-                        </div>
-                        <h5 style="color:brown" class="col-sm-12"><strong><?php echo $f['name']; ?></strong></h5>
-                    </div> 
-                    <h6 style="color: black"><strong><?php echo $f['location']; ?></strong></h6>
-                    <h6  style="color: black"><strong>Course:<?php echo $f['course'] . "-" . $f['duration']; ?><br><?php echo $f['fees']; ?></strong></h6>
-                    <button class=" btn btn-danger"><a href="<?php echo $f['url']; ?>" target="_blank" style="color:white">View Details</a></button>
-                </div>
-            <?php endforeach; ?>
+        <div class="col-sm-2" style="background-color: white;padding-top: 0px">
+            
         </div>
     </div>
 </div>

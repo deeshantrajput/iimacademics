@@ -1,27 +1,27 @@
 <footer class="footer-distributed">
-    <div style="padding-top: 0px;width:100%;">
-    <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
-    <li>
-       <h2 class="zero">&nbsp;&nbsp;&nbsp;Computer Literacy..</h2>
-       <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More</p>
-    </li>
-    <li><a href="http://bracsm.org/" target="_blank"><img src="<?= base_url(); ?>css/images/bras.jpg" class="top" alt=""></a></li>
-     </ul>
-     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
-    <li>
-       <h2 class="zero">&nbsp;&nbsp;&nbsp;Skill Development..</h2>
-       <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
-    </li>
-    <li><a href="http://amassskillventures.in" target="_blank"><img src="<?= base_url(); ?>css/images/nsd.jpg" class="top" alt=""></a></li>
-     </ul>
-     <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim" style="margin-right: 75px">
-    <li>
-       <h2 class="zero">&nbsp;&nbsp;&nbsp;Smart textbooks..</h2>
-       <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
-    </li>
-    <li><a href="http://www.kopykitab.com" target="_blank"><img src="<?= base_url(); ?>css/images/kopy.jpg" class="top" alt=""></a></li>
-     </ul>
-     </div>
+    <div class="container text-center"style="padding-top: 0px;margin:0 auto;display: block;width:80%">
+        <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim">
+            <li>
+                <h2 class="zero">&nbsp;&nbsp;&nbsp;Computer Literacy..</h2>
+                <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More</p>
+            </li>
+            <li><a href="http://bracsm.org/" target="_blank"><img src="<?= base_url(); ?>css/images/bras.jpg" class="top" alt="Dr. BR Ambedkar Computer Literacy Program"></a></li>
+        </ul>
+        <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim">
+            <li>
+                <h2 class="zero">&nbsp;&nbsp;&nbsp;Skill Development..</h2>
+                <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
+            </li>
+            <li><a href="http://amassskillventures.in" target="_blank"><img src="<?= base_url(); ?>css/images/nsd.jpg" class="top" alt="Amass Skill Ventures"></a></li>
+        </ul>
+        <ul class="demo-2 effect col-12 col-md-4 col-sm-6  img-rounded img-responsive slideanim">
+            <li>
+                <h2 class="zero">&nbsp;&nbsp;&nbsp;Smart textbooks..</h2>
+                <p class="zero">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Read More.</p>
+            </li>
+            <li><a href="http://www.kopykitab.com" target="_blank"><img src="<?= base_url(); ?>css/images/kopy.jpg" class="top" alt="Kopy Kitab"></a></li>
+        </ul>
+    </div>
     <div class="footer-left" style="padding-top:40px">
         <h2 style="color: white">IIM Academics</h2>
         <p class="footer-links">
