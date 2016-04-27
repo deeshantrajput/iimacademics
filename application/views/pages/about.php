@@ -4,7 +4,7 @@
 		<!--[if lte IE 9]><script type="text/javascript" src="cssslider_files/csss_engine1/ie.js"></script><![endif]-->
 		<script type="text/javascript" src="<?=base_url();?>cssslider_files/csss_engine1/gestures.js"></script>
             
-                <div class="csslider1 autoplay" style="margin-left:auto;margin-right: auto;display:block;margin-top: 100px">
+                <div id="aboutcarousel" class="csslider1 autoplay" style="margin-left:auto;margin-right: auto;display:block;margin-top: 100px">
 		<input name="cs_anchor1" id="cs_slide1_0" type="radio" class="cs_anchor slide">
 		<input name="cs_anchor1" id="cs_slide1_1" type="radio" class="cs_anchor slide">
 		<input name="cs_anchor1" id="cs_slide1_2" type="radio" class="cs_anchor slide">

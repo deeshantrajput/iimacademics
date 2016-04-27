@@ -1,51 +1,38 @@
 <?php
-
 class Pages extends CI_Controller {
     
     
-    public function view($page = 'home') {
-        if (!file_exists(APPPATH . 'views/pages/' . $page . '.php')) {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
-
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        $this->load->view('templates/header', $data);
+    public function view() {
+        
+        $this->load->view('templates/header');
         $this->load->view('pages/home');
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/footer');
     }
-
     public function aboutus() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/about');
         $this->load->view('templates/footer');
     }
-
     public function services() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/services');
         $this->load->view('templates/footer');
     }
-
     public function projects() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/projects');
         $this->load->view('templates/footer');
     }
-
     public function contacts() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/contacts');
         $this->load->view('templates/footer');
     }
-
     function __construct() {
         parent::__construct();
         $this->load->model('home_model');
         $this->load->helper('url_helper');
     }
-
     public function data_submitted() {
         $data = array(
             'name' => $this->input->post('name'),
@@ -55,15 +42,12 @@ class Pages extends CI_Controller {
         );
         $this->home_model->form_insert($data);
     }
-
     public function contactus() {
-
         $this->load->library('form_validation');
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('purpose', 'Purpose', 'required');
         $this->form_validation->set_rules('message', 'Message', 'required');
-
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('pages/navbar');
             $this->load->view('pages/contacts');
@@ -82,11 +66,9 @@ class Pages extends CI_Controller {
             $this->home_model->form_insert($data);
             $config['mailtype'] = 'html';
             $this->load->library('email', $config);
-
             $this->email->from($this->input->post('email'), $this->input->post('name'));
             $this->email->to('deeshantrajput@gmail.com');
             $this->email->subject('Customer Query');
-
             $msg = "";
             $msg.= "<table width='500' border='0' align='center' cellpadding='0' cellspacing='0' style='font-family:Arial, Helvetica, sans-serif; font-size:10pt; border:1px solid #ccc;'> ";
             $msg.= "<tr>";
@@ -114,20 +96,17 @@ class Pages extends CI_Controller {
             $msg.= "<td height='95'>$message</td>";
             $msg.= "</tr>";
             $msg.= "</table>";
-
             $this->email->message($msg);
             if ($this->email->send()) {
                 redirect(base_url() . 'Pages/thankyou');
             }
         }
     }
-
     public function thankyou() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/thankyou');
         $this->load->view('templates/footer');
     }
-
     public function thankreview() {
         $this->load->view('pages/navbar');
         $this->load->view('pages/thankreview');
@@ -151,7 +130,6 @@ class Pages extends CI_Controller {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search1($location, $name, $course,$sort_by,$sort_order);
             $data['sort_order'] = $sort_order;
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
@@ -159,7 +137,6 @@ class Pages extends CI_Controller {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search2($location, $name,$sort_by,$sort_order);
             $data['sort_order'] = $sort_order;
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
@@ -167,7 +144,6 @@ class Pages extends CI_Controller {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search3($location, $course,$sort_by,$sort_order);
             $data['sort_order'] = $sort_order;
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
@@ -175,7 +151,6 @@ class Pages extends CI_Controller {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search4($name, $course,$sort_by,$sort_order);
             $data['sort_order'] = $sort_order;
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
@@ -199,21 +174,18 @@ class Pages extends CI_Controller {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->Search7($course,$sort_by,$sort_order);
             $data['sort_order'] = $sort_order;
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch', $data);
             $this->load->view('templates/footer');
         } else {
             $this->load->model('home_model');
             $data['records'] = $this->home_model->getSearch($sort_by,$sort_order);
-            $data['feature'] = $this->home_model->featured();
             $data['sort_order'] = $sort_order;
             $this->load->view('pages/navbar');
             $this->load->view('pages/collegesearch',$data);
             $this->load->view('templates/footer');
         }
     }
-
     public function review($name) {
         $data = array(
             'name' => urldecode($name),
@@ -223,7 +195,6 @@ class Pages extends CI_Controller {
         $this->home_model->form_insert_review($data);
         redirect(base_url() . 'Pages/thankreview');
     }
-
     public function rating() {
         $data = array(
             'name' => $this->input->post('name'),
@@ -236,7 +207,6 @@ class Pages extends CI_Controller {
     public function topeng() {
         $this->load->model('home_model');
             $data['records'] = $this->home_model->getEng();
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/top',$data);
             $this->load->view('templates/footer');
@@ -244,7 +214,6 @@ class Pages extends CI_Controller {
     public function topmba() {
         $this->load->model('home_model');
             $data['records'] = $this->home_model->getMba();
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/top',$data);
             $this->load->view('templates/footer');
@@ -252,12 +221,10 @@ class Pages extends CI_Controller {
     public function topuniv() {
         $this->load->model('home_model');
             $data['records'] = $this->home_model->getUniv();
-            $data['feature'] = $this->home_model->featured();
             $this->load->view('pages/navbar');
             $this->load->view('pages/top',$data);
             $this->load->view('templates/footer');
     }
-
     public function autosearch() {
         if (isset($_GET['term'])) {
             $result = $this->home_model->autosearch($_GET['term']);
@@ -290,5 +257,4 @@ class Pages extends CI_Controller {
             }
         }
     }
-
 }

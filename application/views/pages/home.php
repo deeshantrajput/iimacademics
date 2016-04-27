@@ -1,5 +1,5 @@
 
-<div class="jumbotron text-center" style="background-image: url('<?= base_url(); ?>css/images/tech.png');background-size:100% 100%;background-color:white;background-repeat:no-repeat;margin-bottom:0px">
+<div class="jumbotron text-center" style="background-image: url('<?= base_url(); ?>css/images/tech.png');background-size:cover;background-color:white;background-repeat:no-repeat;margin-bottom:0px">
     <h1 style="color:#D04949">IIM Academics</h1> 
     <h3 style="color:#D04949"><strong>Online Digital education for everyone</strong></h3> 
 

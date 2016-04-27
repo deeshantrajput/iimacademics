@@ -1,9 +1,9 @@
 
-    <?php foreach ($records as $item): ?>
-        <div class ="col-sm-12 pickgradient" style="padding-top:40px;padding-left: 0px;padding-right: 0px;padding-bottom: 0px">
-            <div style="-webkit-filter:brightness(60%)"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" width="100%" height="400px"'; ?>
-            </div></div>
-        <div class="container-fluid text-center" style="background-color: white;padding-top:0px;background-image:url('<?php echo base64_encode($item['image']);?>')">
+<?php foreach ($records as $item): ?>
+    <div class ="col-sm-12 pickgradient" style="padding-top:40px;padding-left: 0px;padding-right: 0px;padding-bottom: 0px">
+        <div style="-webkit-filter:brightness(60%)"><?php echo '<img src="data:image/jpeg;base64,' . base64_encode($item['image']) . '" width="100%" height="400px"'; ?>
+        </div></div>
+    <div class="container-fluid text-center" style="background-color: white;padding-top:0px;background-image:url('<?php echo base64_encode($item['image']); ?>')">
         <div  style="padding: 10px; background-color: white">
 
 
